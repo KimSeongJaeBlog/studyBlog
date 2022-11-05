@@ -25,6 +25,7 @@ public class ToDoListMainFrmae extends BaseFrame {
 	private JScrollPane scroscrollPane;
 	private BasePanel workDataPanel;
 	private JPanel worksPanel;
+	private String tmp;
 
 	public ToDoListMainFrmae() {
 		// TODO Auto-generated constructor stub
@@ -80,10 +81,17 @@ public class ToDoListMainFrmae extends BaseFrame {
 		jbNewWork.addActionListener(e -> {
 //			System.out.println("1");
 			new WorkAddUi();
-			worksPanel.add(new WorkDataPanel(""));
+			tmp = WorkAddUi.workText;
+			System.out.println(tmp);
 
-			repaint();
-			revalidate();
+			if (tmp.isEmpty()) {
+				System.out.println(tmp);
+				worksPanel.add(new WorkDataPanel(tmp));
+
+				repaint();
+				revalidate();
+				
+			}
 
 		});
 	}

@@ -12,10 +12,11 @@ import javaGuiProject.BasePanel;
 public class WorkAddUi extends BaseFrame {
 	private JTextField workTest;
 	private BButton addWork;
+	public static String workText;
 
 	public WorkAddUi() {
 		// TODO Auto-generated constructor stub
-		setFrame(400, 100, "");
+		setFrame(400, 100, "일 내용 입력하기");
 		close();
 //		return workTest.getText();
 	}
@@ -39,13 +40,14 @@ public class WorkAddUi extends BaseFrame {
 		// TODO Auto-generated method stub
 		addWork.addActionListener(e->{
 			System.out.println(1);
-			super.setVisible(false);
-			System.out.println(workTest.getText());
+//			System.out.println(workTest.getText());
+			workText = workTest.getText();
+			System.exit(0);
 		});
 	}
 
-	public static void main(String[] args) {
-		new WorkAddUi();
-	}
+//	public static void main(String[] args) {
+//		new WorkAddUi();
+//	}
 
 }
