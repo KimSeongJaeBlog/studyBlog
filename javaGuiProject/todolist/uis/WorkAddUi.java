@@ -12,11 +12,22 @@ import javaGuiProject.BasePanel;
 public class WorkAddUi extends BaseFrame {
 	private JTextField workTest;
 	private BButton addWork;
-	public static String workText;
+	private ToDoListMainFrmae todo;
+//	public static String workText;
 
 	public WorkAddUi() {
 		// TODO Auto-generated constructor stub
 		setFrame(400, 100, "일 내용 입력하기");
+		close();
+//		return workTest.getText();
+	}
+	public WorkAddUi(ToDoListMainFrmae todo) {
+		// TODO Auto-generated constructor stub
+		
+		this.todo = todo;
+		
+		setFrame(400, 100, "일 내용 입력하기");
+		
 		close();
 //		return workTest.getText();
 	}
@@ -41,8 +52,12 @@ public class WorkAddUi extends BaseFrame {
 		addWork.addActionListener(e->{
 			System.out.println(1);
 //			System.out.println(workTest.getText());
-			workText = workTest.getText();
-			System.exit(0);
+//			workText = workTest.getText();
+			todo.returnWorkData(workTest.getText());
+//			System.exit(0);
+	//		super.setVisible(false);
+			
+			super.dispose();
 		});
 	}
 

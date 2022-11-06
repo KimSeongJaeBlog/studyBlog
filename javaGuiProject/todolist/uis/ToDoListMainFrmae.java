@@ -26,6 +26,7 @@ public class ToDoListMainFrmae extends BaseFrame {
 	private BasePanel workDataPanel;
 	private JPanel worksPanel;
 	private String tmp;
+	private WorkAddUi tmpClass;
 
 	public ToDoListMainFrmae() {
 		// TODO Auto-generated constructor stub
@@ -80,20 +81,42 @@ public class ToDoListMainFrmae extends BaseFrame {
 		// TODO Auto-generated method stub
 		jbNewWork.addActionListener(e -> {
 //			System.out.println("1");
-			new WorkAddUi();
-			tmp = WorkAddUi.workText;
-			System.out.println(tmp);
-
-			if (tmp.isEmpty()) {
-				System.out.println(tmp);
-				worksPanel.add(new WorkDataPanel(tmp));
-
-				repaint();
-				revalidate();
-				
-			}
-
+			// tmpClass =  new WorkAddUi(this);
+			new WorkAddUi(this);
+			
 		});
+	}
+	
+	public void returnWorkData(String text) {
+		// TODO Auto-generated method stub
+		
+
+		System.out.println(text);
+
+		if (!text.trim().equals("")) {
+			System.out.println(text);
+			worksPanel.add(new WorkDataPanel(text));
+
+			repaint();
+			revalidate();
+			
+		}
+
+	}
+	public void returnWorkData() {
+		// TODO Auto-generated method stub
+		
+		System.out.println(tmp);
+		
+		if (tmp.isEmpty()) {
+			System.out.println(tmp);
+			worksPanel.add(new WorkDataPanel(tmp));
+			
+			repaint();
+			revalidate();
+			
+		}
+		
 	}
 
 }
