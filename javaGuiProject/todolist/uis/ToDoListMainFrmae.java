@@ -27,6 +27,7 @@ public class ToDoListMainFrmae extends BaseFrame {
 	private JPanel worksPanel;
 	private String tmp;
 	private WorkAddUi tmpClass;
+	private Vector<Vector<String>> workArrey;
 
 	public ToDoListMainFrmae() {
 		// TODO Auto-generated constructor stub
@@ -74,6 +75,12 @@ public class ToDoListMainFrmae extends BaseFrame {
 		jpBottom.addChild();
 		jpBottom.jpLeft.add(workCount);
 		jpBottom.jpRight.add(jbNewWork);
+		
+		// 백터 데이터
+		
+		workArrey = new Vector<Vector<String>>();
+		
+		
 	}
 
 	@Override
