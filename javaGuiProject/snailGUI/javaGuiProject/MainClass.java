@@ -37,6 +37,7 @@ public class MainClass extends BaseFrame{
 
 	private BasePanel jp;
 	private int[][] arr;
+	private int[][] xyArr;
 	
 	public MainClass() {
 		// TODO Auto-generated constructor stub
@@ -48,6 +49,7 @@ public class MainClass extends BaseFrame{
 	public void mkComp() {
 		// TODO Auto-generated method stub
 		arr = arrMake(5);
+		xyArr = new int[5][5];
 		jpCenter.gridLaout(5);
 		
 	}
