@@ -2,6 +2,7 @@ package javaGuiProject;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
 
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
@@ -19,6 +20,15 @@ public class BasePanel extends JPanel{
 		super.setLayout(new BorderLayout());
 		super.setBackground(Color.WHITE);
 	}
+
+	public BasePanel gridLaout(int size) {
+		// TODO Auto-generated constructor stub
+		super.setLayout(new GridLayout(size, size));
+		super.setBackground(Color.WHITE);
+		
+		return this;
+	}
+	
 	
 	public BasePanel line(Color col) {
 		// TODO Auto-generated constructor stub
